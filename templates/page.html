@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link rel="stylesheet" href="../static/page.css">
+</head>
+<body>
+    <div class="page">
+        <a href="/" class="close-page">X</a> 
+        {% for produkt in produkts %}
+        <div class="page-in">
+            <div class="page-img">
+                <img src="{{ produkt[5] }}" alt="">
+            </div>
+            <div class="page-lable">
+                <div class="page-lable-in">
+                    <div class="page-lable-1">{{ produkt[1] }}</div>
+                    <div class="page-lable-2">{{ produkt[3] }}</div>
+                    <div class="page-lable-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam non harum sint molestiae minus doloremque voluptates asperiores ipsam earum.</div>
+                </div>
+                <div class="page-buttons">
+                    <form  method="POST">
+                        <div id="purse" class="page-pusce">{{ produkt[2] }}</div>
+                        <label for="pur">How much will you give</label>
+                        <div class="purse-input">
+                            <input type="text" value="{{ produkt[2] }}" name="pur" required>
+                            <div class="page-data">{{ produkt[4] }}</div>
+                        </div>
+                        <input class="pageButton" type="submit" value="Accept">
+                        <div style="color: red;" class="eror">{{ eror }} {{ row }}</div>
+                    </form>
+                </div>
+            </div>
+        </div>  
+    {% endfor %}
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="hader">
+        <div id="navbar" class="navbar">
+            <div class="navabr-logo">
+                    <img width="50px" src="/static/img/navbar/navbar-logo.png" alt="">
+                    Aucsion
+            </div>
+            <div id="MedNav" class="navbar-in">
+                <div class="navbar-item">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Vindors</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Element</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-left">
+                    <a href="/login" id="Acount" class="navbar-left-1">{{ log }}</a>
+                    <a href="addcar" class="navbar-left-2">Add List</a>
+                    <li id="CloseNav"><div>X</div></li>
+                </div>
+            </div>
+            <div id="openNav" class="navbar-bars">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="baner">
+            <div class="baner-lable">
+                <div class="baner-lable-1">Join Our Next Auction! <br> Find Your Next Car</div>
+                <div class="baner-input">
+                    <div class="baner-input-lable">All Cotigories</div>
+                    <input placeholder="I'm looking For" type="text">
+                    <a href="">Search</a>
+                </div>
+                <div class="baner-bottom">
+                    <div class="baner-bottom-in">
+                        <div id="VidIcon" class="baner-bottom-in-icon">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <div class="baner-bottom-in-lable">We are running our summer discount <br> Watch video to learn more</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="BanerVid" class="baner-vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ccCfJmM3cFU?si=QSpXAKTsT9Twt0LU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="galery">
+        <div class="galery-lable-1">Trending Auctions</div>
+        <div class="galery-lable-2">See what's popular across thousands of items being auctioned daily.</div>
+        <div class="galery-blog">
+            <div class="galery-blog-1">
+                <div class="galery-blog-1-img">
+                    <img src="https://bidpro.webdevia.com/car-automotive-auction-marketplace/wp-content/uploads/sites/6/2021/07/wv-id4--300x300.jpg" alt="">
+                </div>
+                <div class="galery-blog-lable">
+                    <h6>$</h6>
+                    <h2>Volkswagen Gold 9</h2>
+                    <h4>Cars, RVs, Trailers</h4>
+                    <h5>bend now</h5>
+                    <h3>Starting bid: $255,00</h6>
+                </div>
+            </div>
+            <div class="galery-blog-page">
+                <div class="galery-blog-2">
+                    <div class="galery-blog-1">
+                        <div class="galery-blog-1-img">
+                            <img src="https://bidpro.webdevia.com/car-automotive-auction-marketplace/wp-content/uploads/sites/6/2021/07/2020-Volvo-XC90-T8-Review-gear-patrol-slide-1-300x300.jpg" alt="">
+                        </div>
+                        <div class="galery-blog-lable">
+                            <h7>$</h6>
+                            <h4>Volkswagen Gold 9</h2>
+                            <h5>Cars, RVs, Trailers</h4>
+                            <h4>Starting bid: $255,00</h6>
+                        </div>
+                    </div>
+                    <div class="galery-blog-1">
+                        <div class="galery-blog-1-img">
+                            <img src="https://bidpro.webdevia.com/car-automotive-auction-marketplace/wp-content/uploads/sites/6/2021/07/bmw-300x300.jpg" alt="">
+                        </div>
+                        <div class="galery-blog-lable">
+                            <h7>$</h6>
+                            <h4>Volkswagen Gold 9</h2>
+                            <h5>Cars, RVs, Trailers</h4>
+                            <h4>Starting bid: $255,00</h6>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="galery-blog-2">
+                    <div class="galery-blog-1">
+                        <div class="galery-blog-1-img">
+                            <img src="https://bidpro.webdevia.com/car-automotive-auction-marketplace/wp-content/uploads/sites/6/2021/07/product4-300x230.jpg" alt="">
+                        </div>
+                        <div class="galery-blog-lable">
+                            <h7>$</h6>
+                            <h4>Volkswagen Gold 9</h2>
+                            <h5>Cars, RVs, Trailers</h4>
+                            <h4>Starting bid: $255,00</h6>
+                        </div>
+                    </div>
+                    <div class="galery-blog-1">
+                        <div class="galery-blog-1-img">
+                            <img src="https://bidpro.webdevia.com/car-automotive-auction-marketplace/wp-content/uploads/sites/6/2021/07/product2-300x300.jpg" alt="">
+                        </div>
+                        <div class="galery-blog-lable">
+                            <h7>$</h6>
+                            <h4>Volkswagen Gold 9</h2>
+                            <h5>Cars, RVs, Trailers</h4>
+                            <h4>Starting bid: $255,00</h6>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mein">
+        <div class="mein-lable-1">Upcoming Auctions</div>
+        <div class="mein-in">
+            {% for produkt in produkts %}
+            <div class="mein-in-1">
+                <div class="mein-in-1-img">
+                    <img src="{{ produkt[5] }}" alt="">
+                    <a href="/page/{{ produkt[0] }}" class="taklif">Invitation</a>
+                </div>
+                <div class="galery-blog-lable">
+                    <h7>$</h6>
+                    <h4>{{ produkt[1] }}</h4>
+                    <h4>{{ produkt[2] }} $</h6>
+                    <h4>{{ produkt[3] }}</h2>
+                    <h6>{{ produkt[4] }}</h6>
+                    <a href="/tarif/{{ produkt[0] }}">Describsion</a>
+                </div>
+                <!-- <div class="galery-buttons">
+                    <a href="/" class="Taklif">Invitation</div>
+                    <div class="data">{{  produkt[4] }}</div>
+                </div> -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- <div id="loder" class="loder">
+        <div class="loder-in">
+  
+            <img src="../static/img/loder/35e464cb-a55d-43ec-8e41-ffbc250ffd5e_removalai_preview.png" class="car" >  
+            <img src="../static/img/loder/b92580da-ef21-4675-a113-c6a922ef98fc_removalai_preview.png" class="smoke">
+            <img src="../static/img/loder/b92580da-ef21-4675-a113-c6a922ef98fc_removalai_preview.png" class="smoke">
+            </div>
+            <div class="loader-in-1">
+                <div class="loader-lable">
+                    Loading... <div class="loader-lable-1">hold on</div>
+                </div>
+        </div>
+    </div> -->
+
+    <script>
+        let MedNav = document.getElementById("MedNav")
+        let CloseNav = document.getElementById("CloseNav")
+        let openNav = document.getElementById("openNav")
+        let navbar = document.getElementById("navbar")
+        let BanerVid = document.getElementById("BanerVid")
+        let VidIcon = document.getElementById("VidIcon")
+        let loder = document.getElementById("loder")
+        let Acount = document.getElementById("Acount");
+        
+        gsap.to("#smoke", { opacity: 1, scale: 1.5, duration: 0.5, repeat: 3, yoyo: true });
+        gsap.to("#car", { x: window.innerWidth + 200, duration: 3, ease: "power2.inOut" });
+
+        VidIcon.addEventListener("click" , function(){
+            BanerVid.style.top="0";
+        })
+        BanerVid.addEventListener("click" , function(){
+            BanerVid.style.top="-100%"
+        })
+        openNav.addEventListener("click" , function(){
+            MedNav.style.top = "0%";
+        })
+        CloseNav.addEventListener("click" , function(){
+            MedNav.style.top = "-100vh";
+        })
+        window.addEventListener("scroll" , function(){
+            let scroll = window.scrollY;
+            if( scroll > 0 ){
+                navbar.style.backgroundColor="rgb(37, 37, 181)";
+                Acount.style.color="aliceblue"
+
+            }else{
+                navbar.style.backgroundColor="transparent"
+                Acount.style.color="rgb(37, 37, 181)"
+            }
+
+        })
+        function createSmokeAnimation() {
+            gsap.to(".smoke", {
+                opacity: 1,
+                scale: 1.5,
+                y: -50,
+                x: -30,
+                duration: 1.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.out"
+            });
+        }
+        
+        createSmokeAnimation();
+
+        window.addEventListener("load" , function(){
+            loder.classList.add("tog")
+        })
+
+    </script>
+</body>
+</html>

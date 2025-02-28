@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Car</title>
+    <link rel="stylesheet" href="../static/taklif.css">
+</head>
+<body>
+    <div class="page">
+        <a href="/" class="close-page">X</a>
+        {% for produkt in produkts %}
+        <div class="page-in">
+            <div class="page-img">
+                <img src="{{ produkt[5] }}" alt="">
+            </div>
+            <div class="page-lable">
+                <div class="page-lable-in">
+                    <div class="page-lable-1">{{ produkt[1] }}</div>
+                    <div class="page-lable-2">{{ produkt[3] }}</div>
+                    <div class="page-lable-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam non harum sint molestiae minus doloremque voluptates asperiores ipsam earum.</div>
+                </div>
+                <div class="page-buttons">
+                    <form method="POST">
+                        <div id="purse" class="page-pusce">{{ produkt[2] }}</div>
+                        <label for="pur">How much will you give</label>
+                        <div class="purse-input">
+                            <a class="OpenTaklif" href="/page/{{ produkt[0] }}">Invitation</a>
+                            <div class="page-data">{{ produkt[4] }}</div>
+                        </div>
+                        
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="history">
+        <div class="history-lable">Invitations history</div>
+        <table border="1px">
+            <thead>
+                <th>
+                    <div>Id</div>
+                </th>
+                <th>
+                    <div class="foydalanuvchi-Ism">Qatnashuvchilar</div>
+                </th>
+                <th>
+                    <div class="mahsulot-nomi">Mahlusot Nomi</div>
+                </th>
+                <th>
+                    <div class="mahsulot-narxi">Mahsulot Narxi</div>
+                </th>
+            </thead>
+            <tbody>
+                {% for produkt in produkts %}
+                <td><div>{{ produkt[0] }}</div></td>
+                <td><div>Foydalanuvlar Ismi</div></td>
+                <td><div>{{ produkt[1] }}</div></td>
+                <td><div>{{ produkt[2] }}</div></td>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

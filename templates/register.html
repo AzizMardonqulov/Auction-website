@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register_page</title>
+    <link rel="stylesheet" href="../static/register.css">
+</head>
+<body>
+
+
+    <main>
+        <div class="wrapper-form">
+            <form method="POST">
+                <h1>Register</h1>
+                <label for="email"></label>
+                <input type="email" name="email" class="input" placeholder="Emailingizni kiriting" required>
+                <label for="password"></label>
+                <input type="password" name="password" class="input" placeholder="Kodni kiriting" required>
+
+                <label for="submit"></label>
+                    <input type="submit" class="submit" name="submit">
+                
+                <div class="wrapper-register">
+                    <a style="color: white;" href="{{url_for('login')}}" class="register-login">have an account <span>sign-in</span></a>
+                </div>
+               
+            </form>
+        </div>
+    </main>
+</body>
+</html>
