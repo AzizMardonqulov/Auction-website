@@ -57,7 +57,6 @@ def data() :
     cursor.execute("INSERT INTO mahsulotlar (nomi, narx, tavsif, data , rasm) VALUES (?, ?, ? , ? , ?)", 
                        (carname, carprice, carabout , data , img_url ))
     con.commit()
-    con.close()
     return redirect("/")
 
 @app.route("/", methods=["GET", "POST"])
@@ -69,8 +68,6 @@ def home():
     
         cursor.execute("SELECT * FROM mahsulotlar")
         produkts = cursor.fetchall() 
-        cursor.close()
-        con.close()  
         return render_template("index.html", log=userr , produkts = produkts)
         # return render_template("index.html")
     elif "user_id" not in session:
@@ -101,8 +98,6 @@ def page():
     
     cursor.execute("SELECT * FROM mahsulotlar")
     produkts = cursor.fetchall() 
-    cursor.close()
-    con.close()  
     return render_template("page.html" , produkts = produkts)
 
 @app.route("/login", methods =["GET", "POST"])
@@ -195,8 +190,7 @@ def register():
         con = sqlite3.connect("auksion.db")
         cursor =con.cursor()
         cursor.execute("INSERT INTO foydalanuvchilar(foydalanuvchi_nomi, parol) VALUES(?,?)", (foydalanuvchi_nomi, parol))
-        con.commit()
-        con.close()
+
     return render_template("index.html")
 
 @app.route("/tarif/<id>")
@@ -205,8 +199,6 @@ def taklif(id):
     cursor = con.cursor()
     cursor.execute(f"SELECT * FROM mahsulotlar WHERE id = {id}")
     produkts = cursor.fetchall() 
-    cursor.close()
-    con.close()  
     return render_template("tarif.html" , produkts = produkts)
 
 @app.route("/page/<id>", methods=["POST", "GET"])
