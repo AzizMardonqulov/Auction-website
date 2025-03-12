@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search results</title>
+    <link rel="stylesheet" href="../static/search.css">
+</head>
+<body>
+    <a style="color: aliceblue;" href="/">X</a>
+    <div class="wrapper-all">
+        {% if products %}
+
+        <ul>
+            {% for item in products %}
+            <li>
+                <a class="nomi" href="{{url_for('search', q=item[1]) }}">{{ item[1] }}</a>
+                <p class="matn"> <span class="same">Price</span><br> ${{ item[2] }}</p>
+                <p class="matn"><span  class="same">Description <br></span>{{ item[3] }}</p>
+                {% if item[4] %}
+                <div class="wrapper-img">
+                    <img src="..{{item[5]}}" alt="">
+                </div>
+                <a href="{{url_for('tarif', id=item[0])}}" class="wrapper-taklif">
+                    <button class="taklif">Taklif berish</button>
+                </a>
+                <a href="{{url_for('home')}}" class="wrppaer-batafsil">
+                    <button class="batafsil">Batafsil</button>
+                </a>
+                {% else %}
+                        <p class="rasm">No image is available</p>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <div class="wrapper-links">
+            <p>Bunaqa ma'lumot topilmadi</p>
+        <a href="{{url_for('home')}}" class="wrapper-tugma">
+            <button class="tugma">Asosiy menuga qaytish</button>
+        </a>
+        </div>
+        
+    
+        {% endif %}
+    </div>
+
+    
+</body>
+</html>

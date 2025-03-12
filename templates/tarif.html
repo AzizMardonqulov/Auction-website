@@ -55,12 +55,24 @@
                 </th>
             </thead>
             <tbody>
-                {% for produkt in produkts %}
-                <td><div>{{ produkt[0] }}</div></td>
-                <td><div>Foydalanuvlar Ismi</div></td>
-                <td><div>{{ produkt[1] }}</div></td>
-                <td><div>{{ produkt[2] }}</div></td>
-                {% endfor %}
+                <tr>
+                    {% for produkt in produkts %}
+                    <td><div>{{ produkt[0] }}</div></td>
+                    <td><div>Foydalanuvchi Ismi</div></td>
+                    <td><div>{{ produkt[1] }}</div></td>
+                    <td><div>{{ produkt[2] }}</div></td>
+                    {% endfor %}
+                </tr>
+            
+            {% for tarif in tariflar %}
+                <tr>
+                    <td><div>{{ tarif[0] }}</div></td>
+                    <td><div>{{ tarif[1] }}</div></td>
+                    <td><div>{{ tarif[2] }}</div></td>
+                    <td><div>{{ tarif[3] }}$</div></td>
+                </tr>
+            {% endfor %}
+            
             </tbody>
         </table>
     </div>
