@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acsion</title>
+    <link rel="stylesheet" href="../static/produkt.css">
+</head>
+<body>
+    <div class="produk">
+        <div class="produk-in">
+            <div class="produk-in-produk">
+            </div>
+            <form  method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <input name="carName" type="text" placeholder="Enter your car name">
+                <input name="carAbout" type="text" placeholder="Enter your car about">
+                <input name="carPrice" type="number" placeholder="Enter the price of the car"> 
+                <input type="date" name="data">  
+                <input value="Submit" type="submit">             
+            </form>
+        </div>
+    </div>
+    <script>
+             let loder = document.getElementById("loder")
+            gsap.to("#smoke", { opacity: 1, scale: 1.5, duration: 0.5, repeat: 3, yoyo: true });
+            gsap.to("#car", { x: window.innerWidth + 200, duration: 3, ease: "power2.inOut" });
+            function createSmokeAnimation() {
+            gsap.to(".smoke", {
+                opacity: 1,
+                scale: 1.5,
+                y: -50,
+                x: -30,
+                duration: 1.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.out"
+            });
+        }
+        
+        createSmokeAnimation();
+
+        window.addEventListener("load" , function(){
+            loder.classList.add("tog")
+        })
+    </script>
+</body>
+</html>

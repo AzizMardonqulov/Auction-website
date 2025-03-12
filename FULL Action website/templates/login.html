@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="form">
+		<div id="formIn" class="form-in">
+			<div id="LogIn" class="log-in">
+				<div class="log-in-lable-1">Log In</div>
+				<form method="POST">
+					<div class="log-in-1">
+						<input name="email" type="email" placeholder="Email">
+						<i class="fa-regular fa-user"></i>
+					</div>
+					<div class="log-in-1">
+						<input name="password" type="password" placeholder="Password">
+						<i class="fa-solid fa-lock"></i>
+					</div>
+					<div class="log-in-1">	
+						<input type="submit" value="Sing in">
+						<i class="fa-solid fa-right-to-bracket"></i>
+					</div>
+				</form>
+				<a href="{{url_for('register')}}" class="log-in-lable-2">
+					Don't have an account?<div onclick="openReg()">Register</div>
+				</a>
+				<div class="eror" style="color: red;">{{eror}}</div>
+			</div>
+			<div id="Register" class="register">
+				<div class="log-in-lable-1">Register</div>
+				<form method="post">
+					<div class="log-in-1">
+						<input type="password" placeholder="Password">
+						<i class="fa-regular fa-user"></i>
+					</div>
+					<div class="log-in-1">
+						<input type="email" name="email" required placeholder="Email">
+						<i class="fa-regular fa-envelope"></i>
+					</div>
+					<div class="log-in-1">
+						<input type="password" class="on" placeholder="Password">
+						<i class="fa-solid fa-lock"></i>
+					</div>
+					<div class="log-in-1">						
+						<input type="submit" value="Sing Up">
+						<i class="fa-solid fa-user-plus"></i>
+					</div>
+				</form>
+				<div class="log-in-lable-2">
+					Don't have an account? <div onclick="openReg()">Log In</div>
+				</div>
+				<div class="eror" style="color: red;">{{eror}}</div>
+			</div>
+		</div>
+	</div>
+<!-- md5 encrypt/DEcrupt -->
+ <script src="../static/mean.js"></script>
+</body>
+</html>

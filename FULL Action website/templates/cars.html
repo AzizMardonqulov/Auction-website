@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        {% for produkt in produkts %}
+        <div class="mein-in-1">
+            <div class="mein-in-1-img">
+                <img src="{{ img_url }}" alt="">
+            </div>
+            <div class="galery-blog-lable">
+                <h7>$</h6>
+                <h4>{{ produkt[0] }}</h2>
+                <h5>{{ produkt[1] }}</h4>
+                <h4>{{ produkt[2] }}</h6>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+</html>

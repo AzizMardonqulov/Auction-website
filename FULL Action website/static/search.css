@@ -1,0 +1,113 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    border: 2px solid lightgray;
+    padding: 30px 20px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+}
+li{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+a{
+    text-decoration: none;
+    color: rgb(1, 1, 86);
+    font-size: 22px;
+}
+.wrapper-all{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 220px;
+    padding-top: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    color: rgba(255, 255, 255, 0.71);
+    font-size: 20px;
+}
+li{
+    border: 2px solid lightgray;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(20px);
+    /* margin-top: px; */
+    margin-bottom: 40px;
+
+}
+.nomi{
+    color: lightblue;
+
+}
+.same{
+    color: white;
+}
+img{
+    width: 300px;
+    height: auto;
+    /* display: block; */
+    border: 2px solid red;
+    border-radius: 10px;
+}
+.wrapper-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    background-image: url(./dakdklaldka.jpg);
+    width: 100%;   
+    /* height: 100vh; */
+}
+.tugma{
+    background-color: red;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 10px;
+
+}
+.wrapper-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.taklif{
+    background-color: blue;
+    color: white;
+    padding: 15px 150px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+.batafsil{
+    background-color: cyan;
+    color:blue;
+    padding: 15px 168px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+
+
+.taklif:hover{
+    background-color: rgba(0, 0, 255, 0.733);
+    cursor: pointer;
+}
+.batafsil:hover{
+    background-color: rgba(0, 255, 255, 0.755);
+    cursor: pointer;
+}
