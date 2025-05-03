@@ -241,5 +241,4 @@ def search():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Render uchun to'g'ri port
-    app.run(host="0.0.0.0", port=port, debug=False, use_reloader=False)
+    app.run(debug=False, use_reloader=False)
